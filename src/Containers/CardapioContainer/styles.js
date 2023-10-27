@@ -35,7 +35,7 @@ export const TextItemCardapio = styled.div`
         line-height: normal;
     }
     .description{
-        width: 238px;
+        width: 100%;
         color: #404040;
         font-size: 12px;
         font-weight: 400;
