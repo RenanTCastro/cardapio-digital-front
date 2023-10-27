@@ -8,8 +8,8 @@ import SettingIcon from "../../assets/setting-icon.svg";
 import ButtonCM from "../../components/ButtonCM/ButtonCM";
 
 //     HOME CONTAINERS     //
-import CategoryCarrousel from "../../components/CategoryCarrouselCM/CategoryCarrousel";
-import ProductCard from "../../components/ProductCardCM/ProductCard";
+import CategoryCarrousel from "../../components/CategoryCarrouselCM/CategoryCarrouselCM";
+import ProductCard from "../../components/ProductCardCM/ProductCardCM";
 
 
 const Home = () => {
