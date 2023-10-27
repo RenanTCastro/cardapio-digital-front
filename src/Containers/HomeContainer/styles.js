@@ -36,7 +36,7 @@ export const ItemCategoria = styled.li`
 
 export const Title = styled.h3`
     color: #FF6100;
-    font-size: 16;
+    font-size: 16px;
     margin: 8px 0;
     font-weight: 500;
     line-height: normal;
