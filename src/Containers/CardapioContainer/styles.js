@@ -12,6 +12,13 @@ export const ContainerCardapio = styled.div`
         list-style: none;
         padding: 0;
     }
+    @media (min-width: 1024px) {
+        ul{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 5px;
+        }
+    }
 `
 
 export const ItemCardapio = styled.li`
