@@ -6,7 +6,11 @@ import LogoutIcon from "../../assets/logout-icon.svg";
 import SettingIcon from "../../assets/setting-icon.svg";
 
 import ButtonCM from "../../components/ButtonCM/ButtonCM";
+
+//     HOME CONTAINERS     //
 import Categorias from "../../Containers/HomeContainer";
+import Cardapio from "../../Containers/CardapioContainer";
+
 
 const Home = () => {
     return(
@@ -24,6 +28,7 @@ const Home = () => {
             <ButtonCM>Nova refeição</ButtonCM>
             <ButtonCM>Gerar QR code</ButtonCM>
             <Categorias/>
+            <Cardapio/>
         </HomeContainer>
     )
 }

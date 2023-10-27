@@ -6,7 +6,11 @@ export const CategoriasContainer = styled.div`
         display: flex;
         list-style: none;
         padding: 0;
-        overflow-y: scroll;
+        overflow: scroll;
+        
+    }
+    ul::-webkit-scrollbar {
+    display: none;
     }
 `
 
