@@ -26,7 +26,7 @@ function Categorias(){
         <ContainerCategorias>
             <ul>
                 {CategoriasModelsTest.map((e)=>(
-                    <ItemCategoria>
+                    <ItemCategoria key={e.Title}>
                         <img src={e.Image}/>
                         <span>{e.Title}</span>
                     </ItemCategoria>
