@@ -6,11 +6,12 @@ import LogoutIcon from "../../assets/logout-icon.svg";
 import SettingIcon from "../../assets/setting-icon.svg";
 
 import ButtonCM from "../../components/ButtonCM/ButtonCM";
+import Categorias from "../../Containers/HomeContainer";
 
 const Home = () => {
     return(
         <HomeContainer>
-           <TitleContainer>
+            <TitleContainer>
                 <Title>Bem vindo(a), D'Itália</Title>
                 <ButtonSettings>
                     <img src={SettingIcon} alt="icone sair"/>
@@ -22,6 +23,7 @@ const Home = () => {
             </ButtonLogout>
             <ButtonCM>Nova refeição</ButtonCM>
             <ButtonCM>Gerar QR code</ButtonCM>
+            <Categorias/>
         </HomeContainer>
     )
 }
