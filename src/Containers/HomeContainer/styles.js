@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CategoriasContainer = styled.div`
+export const ContainerCategorias = styled.div`
 
     ul{
         display: flex;
@@ -20,7 +20,6 @@ export const ItemCategoria = styled.li`
     span{
         color: #000;
         text-align: center;
-        font-family: Inter;
         font-size: 12px;
         font-style: normal;
         font-weight: 500;
@@ -39,4 +38,6 @@ export const Title = styled.h3`
     color: #FF6100;
     font-size: 16;
     margin: 8px 0;
+    font-weight: 500;
+    line-height: normal;
 `

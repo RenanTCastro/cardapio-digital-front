@@ -40,20 +40,23 @@ function Cardapio(){
     ]
 
     return(
-        <ContainerCardapio>
-            <ul>
-                {ItensCardapio.map((e)=>(
-                    <ItemCardapio key={e.Id}>
-                        <img src={e.Image}/>
-                        <TextItemCardapio>
-                            <span>{e.Title}</span>
-                            <p className="description">{e.Description}</p>
-                            <p className="price">{e.Price}</p>
-                        </TextItemCardapio>
-                    </ItemCardapio>
-                ))}
-            </ul>
-        </ContainerCardapio>
+        <section>
+            <ContainerCardapio>
+                <h3>Cardápio</h3>
+                <ul>
+                    {ItensCardapio.map((e)=>(
+                        <ItemCardapio key={e.Id}>
+                            <img src={e.Image}/>
+                            <TextItemCardapio>
+                                <span>{e.Title}</span>
+                                <p className="description">{e.Description}</p>
+                                <p className="price">{e.Price}</p>
+                            </TextItemCardapio>
+                        </ItemCardapio>
+                    ))}
+                </ul>
+            </ContainerCardapio>
+        </section>
     )
 }
 

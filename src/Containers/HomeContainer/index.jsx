@@ -1,4 +1,4 @@
-import { CategoriasContainer, Title, ItemCategoria } from "./styles";
+import { ContainerCategorias, Title, ItemCategoria } from "./styles";
 
 function Categorias(){
     const CategoriasModelsTest = [
@@ -23,7 +23,7 @@ function Categorias(){
     return(
     <section>
         <Title>Categorias</Title>
-        <CategoriasContainer>
+        <ContainerCategorias>
             <ul>
                 {CategoriasModelsTest.map((e)=>(
                     <ItemCategoria>
@@ -32,7 +32,7 @@ function Categorias(){
                     </ItemCategoria>
                 ))}
             </ul>
-        </CategoriasContainer>
+        </ContainerCategorias>
     </section>
     )
 }
