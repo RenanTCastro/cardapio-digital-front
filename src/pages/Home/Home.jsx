@@ -8,8 +8,8 @@ import SettingIcon from "../../assets/setting-icon.svg";
 import ButtonCM from "../../components/ButtonCM/ButtonCM";
 
 //     HOME CONTAINERS     //
-import Categorias from "../../Containers/HomeContainer";
-import Cardapio from "../../Containers/CardapioContainer";
+import CategoryCarrousel from "../../components/CategoryCarrouselCM/CategoryCarrousel";
+import ProductCard from "../../components/ProductCardCM/ProductCard";
 
 
 const Home = () => {
@@ -27,8 +27,8 @@ const Home = () => {
             </ButtonLogout>
             <ButtonCM>Nova refeição</ButtonCM>
             <ButtonCM>Gerar QR code</ButtonCM>
-            <Categorias/>
-            <Cardapio/>
+            <CategoryCarrousel/>
+            <ProductCard/>
         </HomeContainer>
     )
 }

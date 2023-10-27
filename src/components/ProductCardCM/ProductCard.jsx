@@ -1,7 +1,7 @@
-import { ContainerCardapio, ItemCardapio, TextItemCardapio } from "./styles"
+import { MenuContainer, MenuItem, MenuItemText } from "./styles"
 
-function Cardapio(){
-    const ItensCardapio = [
+function ProductCard(){
+    const MenuItemModel = [
         {
             Id: '1',
             Image: 'https://placehold.co/90x72',
@@ -41,23 +41,23 @@ function Cardapio(){
 
     return(
         <section>
-            <ContainerCardapio>
+            <MenuContainer>
                 <h3>Cardápio</h3>
                 <ul>
-                    {ItensCardapio.map((e)=>(
-                        <ItemCardapio key={e.Id}>
+                    {MenuItemModel.map((e)=>(
+                        <MenuItem key={e.Id}>
                             <img src={e.Image}/>
-                            <TextItemCardapio>
+                            <MenuItemText>
                                 <span>{e.Title}</span>
                                 <p className="description">{e.Description}</p>
                                 <p className="price">{e.Price}</p>
-                            </TextItemCardapio>
-                        </ItemCardapio>
+                            </MenuItemText>
+                        </MenuItem>
                     ))}
                 </ul>
-            </ContainerCardapio>
+            </MenuContainer>
         </section>
     )
 }
 
-export default Cardapio
+export default ProductCard

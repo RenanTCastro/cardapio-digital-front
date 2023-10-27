@@ -1,7 +1,7 @@
-import { ContainerCategorias, Title, ItemCategoria } from "./styles";
+import { CategoryContainer, Title, CategoryItem } from "./styles";
 
-function Categorias(){
-    const CategoriasModelsTest = [
+function CategoryCarrousel(){
+    const CategoryModel = [
         {
             Title: 'Vinhos',
             Image: 'https://placehold.co/90x72'
@@ -23,18 +23,18 @@ function Categorias(){
     return(
     <section>
         <Title>Categorias</Title>
-        <ContainerCategorias>
+        <CategoryContainer>
             <ul>
-                {CategoriasModelsTest.map((e)=>(
-                    <ItemCategoria key={e.Title}>
+                {CategoryModel.map((e)=>(
+                    <CategoryItem key={e.Title}>
                         <img src={e.Image}/>
                         <span>{e.Title}</span>
-                    </ItemCategoria>
+                    </CategoryItem>
                 ))}
             </ul>
-        </ContainerCategorias>
+        </CategoryContainer>
     </section>
     )
 }
 
-export default Categorias
+export default CategoryCarrousel

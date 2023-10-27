@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ContainerCategorias = styled.div`
+export const CategoryContainer = styled.div`
 
     ul{
         display: flex;
@@ -14,7 +14,7 @@ export const ContainerCategorias = styled.div`
     }
 `
 
-export const ItemCategoria = styled.li`
+export const CategoryItem = styled.li`
     text-align: center;
     margin-right: 12px;
     span{
