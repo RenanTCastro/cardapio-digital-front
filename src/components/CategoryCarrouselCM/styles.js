@@ -7,7 +7,7 @@ export const CategoryContainer = styled.div`
         list-style: none;
         padding: 0;
         overflow: scroll;
-        
+        margin: 15px 0;
     }
     ul::-webkit-scrollbar {
     display: none;
@@ -31,6 +31,10 @@ export const CategoryItem = styled.li`
         width: 90px;
         height: 72px;
         border-radius: 22px;
+    }
+    a{
+        text-decoration: none;
+        margin: 0;
     }
 `
 

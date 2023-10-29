@@ -6,7 +6,7 @@ export const MenuContainer = styled.div`
         font-size: 16px;
         font-weight: 500;
         line-height: normal;
-        margin: 15px 0;
+        margin: 0;
     }
     ul{
         list-style: none;
@@ -40,6 +40,10 @@ export const MenuItemText = styled.div`
         font-size: 14px;
         font-weight: 600;
         line-height: normal;
+    }
+    a{
+        text-decoration: none;
+        cursor: pointer;
     }
     .description{
         width: 100%;

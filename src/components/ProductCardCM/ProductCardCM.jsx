@@ -49,9 +49,9 @@ function ProductCard(){
                         <MenuItem key={e.Id}>
                             <img src={e.Image}/>
                             <MenuItemText>
-                                <Link to='#'><span>{e.Title}</span></Link>
+                                <Link to='#'><span>{e.Title}</span>
                                 <p className="description">{e.Description}</p>
-                                <p className="price">{e.Price}</p>
+                                <p className="price">{e.Price}</p></Link>
                             </MenuItemText>
                         </MenuItem>
                     ))}
