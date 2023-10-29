@@ -1,4 +1,5 @@
 import { MenuContainer, MenuItem, MenuItemText } from "./styles"
+import { Link } from "react-router-dom"
 
 function ProductCard(){
     const MenuItemModel = [
@@ -48,7 +49,7 @@ function ProductCard(){
                         <MenuItem key={e.Id}>
                             <img src={e.Image}/>
                             <MenuItemText>
-                                <span>{e.Title}</span>
+                                <Link to='#'><span>{e.Title}</span></Link>
                                 <p className="description">{e.Description}</p>
                                 <p className="price">{e.Price}</p>
                             </MenuItemText>
