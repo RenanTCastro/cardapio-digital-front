@@ -18,7 +18,7 @@ export const Title = styled.h3`
 `;
 
 export const ButtonSettings = styled.button`
-    margin: 10px 0;
+    margin: 0 0;
     padding: 0;
     border: none;
     background: transparent;
