@@ -13,7 +13,7 @@ export const TitleContainer = styled.div`
 `;
 
 export const Title = styled.h3`
-    color: #FF3131;
+    color: #FF6100;
     line-height: 0;
 `;
 

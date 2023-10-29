@@ -14,7 +14,7 @@ const HomeClient = () => {
     return(
         <HomeContainer>
             <TitleContainer>
-                <Title>Bem vindo(a), D'Itália</Title>
+                <Title>Bem vindo(a), Renan Castro!</Title>
                 <ButtonSettings>
                     <img src={SettingIcon} alt="icone sair"/>
                 </ButtonSettings>
