@@ -1,4 +1,5 @@
 import { CategoryContainer, Title, CategoryItem } from "./styles";
+import { Link } from "react-router-dom";
 
 function CategoryCarrousel(){
     const CategoryModel = [
@@ -27,8 +28,10 @@ function CategoryCarrousel(){
             <ul>
                 {CategoryModel.map((e)=>(
                     <CategoryItem key={e.Title}>
-                        <img src={e.Image}/>
-                        <span>{e.Title}</span>
+                        <Link to='#'>
+                            <img src={e.Image}/>
+                            <span>{e.Title}</span>
+                        </Link>
                     </CategoryItem>
                 ))}
             </ul>
