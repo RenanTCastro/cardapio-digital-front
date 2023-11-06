@@ -58,6 +58,11 @@ export const InputNameEstab = styled.input`
     &::placeholder{
         font-size: 17px;
     }
+    &:focus{
+        box-shadow: 0 0 0 0;
+        border: 0 none;
+        outline: 0;
+    }
     border: none;
     width: 95%;
     padding: 11px 16px 11px 0px;
@@ -65,6 +70,11 @@ export const InputNameEstab = styled.input`
 export const InputDescEstab = styled.textarea`
     &::placeholder{
         font-size: 17px;
+    }
+    &:focus{
+        box-shadow: 0 0 0 0;
+        border: 0 none;
+        outline: 0;
     }
     font-family: Inter;
     font-weight: 400;
