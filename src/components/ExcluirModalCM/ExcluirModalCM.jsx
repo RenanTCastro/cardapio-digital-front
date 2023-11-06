@@ -3,6 +3,7 @@ import xIcon from '../../assets/x-icon.svg'
 import ButtonCM from "../ButtonCM/ButtonCM"
 
 function ExcluirModalCM(props){
+    
     return(
         <BackGround>
             <ModelContainer>

@@ -16,10 +16,10 @@ function EditEstab(){
 
     return(
         <>
+        {excluir && (<ExcluirModalCM closeFunc={CloseModal} />)}
         <Container>
-            {excluir && (<ExcluirModalCM closeFunc={CloseModal} />)}
             <BackText>
-                <Link to='#'><i class="fa-solid fa-chevron-left"></i></Link>Cardápio
+                <Link to='#'><i class="fa-solid fa-chevron-left"></i>Cardápio</Link>
             </BackText>
             <Inputs>
                 <div className="NomeEstabContainer">

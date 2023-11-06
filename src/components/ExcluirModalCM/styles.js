@@ -3,9 +3,8 @@ import styled from "styled-components";
 export const BackGround = styled.div`
 position: absolute;
 background-color: rgb(0,0,0, 0.7);
-height: 100vh;
 width: 100vw;
-left: -38px;
+height: 100vh;
 z-index: 10;
 `
 
@@ -15,23 +14,25 @@ export const ModelContainer = styled.div`
     z-index: 20;
     background-color: white;
     border-radius: 16px;
-    max-width: 327px;
-    width: 100%;
+    width: 80%;
     max-height: 264px;
     height: 100%;
     border: 1px solid;
     margin: 32vh auto;
     img{
         margin-bottom: 20px;
+        justify-content: end;
     }
     h3{
         color: var(--neutral-neutral-900, #212134);
         font-weight: 600;
         line-height: 22px;
+        margin: 10px 0;
     }
     .Button{
         width: 100%;
         border-radius: 16px;
+        margin-top: 20px;
     }
 `
 
