@@ -5,6 +5,7 @@ import ExemploPage2 from "./pages/ExemploPage2/ExemploPage2";
 import Home from "./pages/Home/Home";
 import HomeClient from "./pages/HomeClient/Home";
 import EditEstab from "./pages/EditEstab/EditEstab";
+import ProductAdd from "./pages/ProductAdd/ProductAdd";
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/Home-client" element={<HomeClient/>}/>
         <Route path="/EditEstab" element={<EditEstab/>}/>
+        <Route path="/Product/:id" element={<ProductAdd/>}/>
+
         <Route path="/Page2" element={<ExemploPage2 />}/>
         <Route path="/Page1" element={<ExemploPage/>}/>
       </Routes>
