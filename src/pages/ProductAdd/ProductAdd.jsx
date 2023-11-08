@@ -11,13 +11,18 @@ function ProductAdd(){
     const{ id } = useParams()
     const [quantidade, setQuantidade] = useState(1)
     const [product, setProduct] = useState([])
-    const [price, setPrice] = useState('0')
+    const [staticPrice, setStaticPrice] = useState(0)
+    const [price, setPrice] = useState(0)
+    
 
     function AddPrice(){
-        // let priceReplaced = price.replace(",", '.')
-        // console.log(priceReplaced)
-        let Item = quantidade * parseFloat(price)
-        return setPrice(Item)
+        let newPrice = price + price
+        return setPrice(newPrice)
+    }
+
+    function RemovePrice(){
+        let newPrice = price - staticPrice
+        return setPrice(newPrice)
     }
 
     function incrementa(){
@@ -25,8 +30,8 @@ function ProductAdd(){
         if(numero >= 15){
             return
         }else{
-        AddPrice()
-        return setQuantidade(numero + 1)}
+            setQuantidade(numero + 1)}
+            AddPrice()
     }
 
     function decrementa(){
@@ -34,18 +39,23 @@ function ProductAdd(){
         if(numero<= 1){
             return
         }else{
-        return setQuantidade(numero - 1)}
+            setQuantidade(numero - 1)
+            console.log(quantidade)
+            return RemovePrice()
+        }
     }
 
     async function HandleProduct(){
         let productItem = [ProductsModels.find((item)=> item.Id === id)]
-        setPrice(productItem.Price)
+        let stringReplaced = productItem[0].Price.replace(',','.')
+        let numberPrice = parseFloat(stringReplaced)
+        setPrice(numberPrice)
+        setStaticPrice(numberPrice)
         setProduct(productItem)
     }
 
     useEffect(()=>{
         HandleProduct();
-        AddPrice()
     },[])
 
 
