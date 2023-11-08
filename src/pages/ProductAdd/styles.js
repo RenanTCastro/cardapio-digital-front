@@ -56,10 +56,11 @@ export const Bottons = styled.div`
             color: #000;
             text-align: center;
             font-feature-settings: 'case' on;
-            font-size: 20px;
+            font-size: 17px;
             font-weight: 200;
             line-height: 22px; /* 129.412% */
             letter-spacing: -0.408px;
+            margin: 0 5px;
         }
         img{
             width: 32px;
