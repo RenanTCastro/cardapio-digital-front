@@ -14,7 +14,7 @@ function ProductCard(){
                             <MenuItemText>
                                 <Link to='#'><span>{e.Title}</span>
                                 <p className="description">{e.Description}</p>
-                                <p className="price">{e.Price}</p></Link>
+                                <p className="price">R${e.Price}</p></Link>
                             </MenuItemText>
                         </MenuItem>
                     ))}

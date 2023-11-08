@@ -1,9 +1,9 @@
-import { Container, BackText, Inputs, InputNameEstab, InputDescEstab, ButtonsContainer } from "./styles"
-import ExcluirModalCM from "../../components/ExcluirModalCM/ExcluirModalCM"
-import { Link } from "react-router-dom"
-import CancelIcon from '../../assets/cancel-icon.svg'
+import { Container, Inputs, InputNameEstab, InputDescEstab, ButtonsContainer } from "./styles"
 import { useState } from "react"
+import ExcluirModalCM from "../../components/ExcluirModalCM/ExcluirModalCM"
+import CancelIcon from '../../assets/cancel-icon.svg'
 import ButtonCM from "../../components/ButtonCM/ButtonCM"
+import BackTitle from "../../components/BackTitleCM/BackTitle"
 
 function EditEstab(){
     const [nameEstab, setNameEstab] = useState('')
@@ -18,9 +18,7 @@ function EditEstab(){
         <>
         {excluir && (<ExcluirModalCM closeFunc={CloseModal} />)}
         <Container>
-            <BackText>
-                <Link to='#'><i class="fa-solid fa-chevron-left"></i>Cardápio</Link>
-            </BackText>
+            <BackTitle to='#'>Cardápio</BackTitle>
             <Inputs>
                 <div className="NomeEstabContainer">
                     <InputNameEstab onChange={(e)=> setNameEstab(e.target.value)} value={nameEstab} type="text" placeholder="Nome do estabelecimento" />

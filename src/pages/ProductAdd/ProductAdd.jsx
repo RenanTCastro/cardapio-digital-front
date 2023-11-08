@@ -1,13 +1,80 @@
+import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { ProductsModels } from "../../Models/ProductModels"
+import { Container, Bottons, ProductContainer, ItemContainer, TextProduct } from "./styles"
+import BackTitle from '../../components/BackTitleCM/BackTitle'
+import iconLess from '../../assets/icons/iconPlu.svg'
+import iconPlus from '../../assets/icons/iconLess.svg'
+
 
 function ProductAdd(){
     const{ id } = useParams()
+    const [quantidade, setQuantidade] = useState(1)
+    const [product, setProduct] = useState([])
+    const [price, setPrice] = useState('0')
+
+    function AddPrice(){
+        // let priceReplaced = price.replace(",", '.')
+        // console.log(priceReplaced)
+        let Item = quantidade * parseFloat(price)
+        return setPrice(Item)
+    }
+
+    function incrementa(){
+        let numero = quantidade
+        if(numero >= 15){
+            return
+        }else{
+        AddPrice()
+        return setQuantidade(numero + 1)}
+    }
+
+    function decrementa(){
+        let numero = quantidade
+        if(numero<= 1){
+            return
+        }else{
+        return setQuantidade(numero - 1)}
+    }
+
+    async function HandleProduct(){
+        let productItem = [ProductsModels.find((item)=> item.Id === id)]
+        setPrice(productItem.Price)
+        setProduct(productItem)
+    }
+
+    useEffect(()=>{
+        HandleProduct();
+        AddPrice()
+    },[])
+
 
     return(
         <>
-        <h2>oi</h2>
-        <span>meu produto é {id}</span>
+            <Container>
+                <BackTitle to="/Home-client">Cardápio</BackTitle>
+                {product.map(e =>(
+                    <ProductContainer key={e.Id}>
+                        <ItemContainer>
+                            <img src={e.Image} alt={e.Title} />
+                            <TextProduct>
+                                <h2>{e.Title}</h2>
+                                <p>{e.Description}</p>
+                            </TextProduct>
+                        </ItemContainer>
+                        <Bottons>
+                            <div className="incrementadora">
+                                <img onClick={()=>decrementa()} src={iconLess}/>
+                                <span>{quantidade}</span>
+                                <img onClick={()=>incrementa()} src={iconPlus}/>
+                            </div>
+                            <div className="price">
+                                <span>Adicionar</span><span>R${price}</span>
+                            </div>
+                        </Bottons>
+                    </ProductContainer>
+                ))}
+            </Container>
         </>
     )
 }
