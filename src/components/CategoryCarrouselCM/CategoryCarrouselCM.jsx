@@ -29,7 +29,7 @@ function CategoryCarrousel(){
                 {CategoryModel.map((e)=>(
                     <CategoryItem key={e.Title}>
                         <Link to='#'>
-                            <img src={e.Image}/>
+                            <img src={e.Image} alt="categoria"/>
                             <span>{e.Title}</span>
                         </Link>
                     </CategoryItem>
