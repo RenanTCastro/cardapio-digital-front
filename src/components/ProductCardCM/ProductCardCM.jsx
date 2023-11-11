@@ -47,7 +47,7 @@ function ProductCard(){
                 <ul>
                     {MenuItemModel.map((e)=>(
                         <MenuItem key={e.Id}>
-                            <img src={e.Image}/>
+                            <img src={e.Image} alt="foto produto"/>
                             <MenuItemText>
                                 <Link to='#'><span>{e.Title}</span>
                                 <p className="description">{e.Description}</p>
