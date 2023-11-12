@@ -13,10 +13,9 @@ function ProductAdd(){
     const [product, setProduct] = useState([])
     const [staticPrice, setStaticPrice] = useState(0)
     const [price, setPrice] = useState(0)
-    
 
     function AddPrice(){
-        let newPrice = price + price
+        let newPrice = price + staticPrice
         return setPrice(newPrice)
     }
 
@@ -30,8 +29,10 @@ function ProductAdd(){
         if(numero >= 15){
             return
         }else{
-            setQuantidade(numero + 1)}
+            setQuantidade(numero + 1)
             AddPrice()
+            console.log(staticPrice)
+        }
     }
 
     function decrementa(){
@@ -40,8 +41,7 @@ function ProductAdd(){
             return
         }else{
             setQuantidade(numero - 1)
-            console.log(quantidade)
-            return RemovePrice()
+            RemovePrice()
         }
     }
 
@@ -79,7 +79,7 @@ function ProductAdd(){
                                 <img onClick={()=>incrementa()} src={iconPlus}/>
                             </div>
                             <div className="price">
-                                <span>Adicionar</span><span>R${price}</span>
+                                <span>Adicionar</span><span>R${price.toFixed(2)}</span>
                             </div>
                         </Bottons>
                     </ProductContainer>
