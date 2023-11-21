@@ -9,7 +9,7 @@ const ExemploPage2 = () => {
     return(
         <div>
             <ButtonExample onClick={()=>navigate('/')}>
-                CLIQUE AQUI
+                CLIQUE AQUI 
             </ButtonExample>
         </div>
     )
