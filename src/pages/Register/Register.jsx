@@ -132,7 +132,7 @@ const Register = () => {
 
       <S.Return p="true">
         Já tem uma conta?
-        <Link to="/login">Criar conta</Link>
+        <Link to="/login">Fazer login</Link>
       </S.Return>
     </ContainerCM>
   );
