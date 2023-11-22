@@ -1,19 +1,16 @@
-import styled from "styled-components/macro";
+import styled from "styled-components";
 
 export const Button = styled.button`
-  height: 50px;
-  margin: 10px 0;
-  padding: 10px;
+  width: 16.5rem;
+  height: 2.3rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(340, 70, 0, 0.6),
+    rgba(340, 70, 0, 1)
+  );
+  color: #fff;
   border: none;
-  border-radius: 10px;
-  background: linear-gradient(180deg, #FF914D 32.29%, #FF3131 87.5%);
-  font-family: Inter;
-  font-size: 14px;
-  color: white;  
-  &:hover {
-    cursor: pointer;
-  }
-  &:active{
-    background-color: #FF3131;
-  }
+  border-radius: 0.6rem;
 `;
