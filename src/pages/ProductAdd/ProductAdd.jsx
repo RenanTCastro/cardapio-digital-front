@@ -14,6 +14,12 @@ function ProductAdd(){
     const [staticPrice, setStaticPrice] = useState(0)
     const [price, setPrice] = useState(0)
 
+    function formataPreco(preco){
+        const precoStr = preco.toString()
+        const precoRpl = precoStr.replace('.',',')
+        return precoRpl
+    }
+
     function AddPrice(){
         let newPrice = price + staticPrice
         return setPrice(newPrice)
@@ -79,7 +85,7 @@ function ProductAdd(){
                                 <img onClick={()=>incrementa()} src={iconPlus}/>
                             </div>
                             <div className="price">
-                                <span>Adicionar</span><span>R${price.toFixed(2)}</span>
+                                <span>Adicionar</span><span>R${formataPreco(price.toFixed(2))}</span>
                             </div>
                         </Bottons>
                     </ProductContainer>
