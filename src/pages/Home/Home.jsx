@@ -11,8 +11,31 @@ import ButtonCM from "../../components/ButtonCM/ButtonCM";
 import CategoryCarrousel from "../../components/CategoryCarrouselCM/CategoryCarrouselCM";
 import ProductCard from "../../components/ProductCardCM/ProductCardCM";
 
+import api from "../../services/api";
 
 const Home = () => {
+
+    const generateQr = async () => {
+        try {
+            const data = {
+                user_id: "0",
+                user_name: "teste"
+            }
+
+            const response = await api.post("/gerar-qr", data, {
+                responseType: 'arraybuffer',
+                headers: { 'Accept': 'application/pdf' },
+            });
+    
+            const pdfBlob = new Blob([response.data], { type: 'application/pdf' });
+            const pdfUrl = URL.createObjectURL(pdfBlob);
+    
+            window.open(pdfUrl, '_blank');
+        } catch (error) {
+            console.error('Erro ao gerar o QR code e o PDF:', error);
+        }
+    }
+
     return(
         <HomeContainer>
             <TitleContainer>
@@ -26,7 +49,7 @@ const Home = () => {
                 Sair
             </ButtonLogout>
             <ButtonCM>Nova refeição</ButtonCM>
-            <ButtonCM>Gerar QR code</ButtonCM>
+            <ButtonCM onClick={()=>generateQr()}>Gerar QR code</ButtonCM>
             <CategoryCarrousel/>
             <ProductCard/>
         </HomeContainer>

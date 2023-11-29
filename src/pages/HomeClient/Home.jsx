@@ -1,6 +1,6 @@
 import React from "react";
 
-import { HomeContainer, TitleContainer, Title, ButtonSettings, ButtonLogout } from "./styles";
+import { HomeContainer, TitleContainer, Title, ButtonLogout } from "./styles";
 
 import LogoutIcon from "../../assets/logout-icon.svg";
 
