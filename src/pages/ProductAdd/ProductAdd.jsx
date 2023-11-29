@@ -15,9 +15,10 @@ function ProductAdd(){
     const [price, setPrice] = useState(0)
 
     function formataPreco(preco){
-        const precoStr = preco.toString()
-        const precoRpl = precoStr.replace('.',',')
-        return precoRpl
+        return new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        }).format(preco)
     }
 
     function AddPrice(){
@@ -85,7 +86,7 @@ function ProductAdd(){
                                 <img onClick={()=>incrementa()} src={iconPlus}/>
                             </div>
                             <div className="price">
-                                <span>Adicionar</span><span>R${formataPreco(price.toFixed(2))}</span>
+                                <span>Adicionar</span><span>{formataPreco(price.toFixed(2))}</span>
                             </div>
                         </Bottons>
                     </ProductContainer>
