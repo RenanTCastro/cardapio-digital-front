@@ -1,23 +1,11 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React from "react";
+import RoutesApp from './routes';
+import { AuthProvider } from "./contexts/auth";
 
-import ExemploPage from "./pages/ExemploPage/ExemploPage";
-import ExemploPage2 from "./pages/ExemploPage2/ExemploPage2";
-import Home from "./pages/Home/Home";
-import HomeClient from "./pages/HomeClient/Home";
-import EditEstab from "./pages/EditEstab/EditEstab";
-
-function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="/Home-client" element={<HomeClient/>}/>
-        <Route path="/EditEstab" element={<EditEstab/>}/>
-        <Route path="/Page2" element={<ExemploPage2 />}/>
-        <Route path="/Page1" element={<ExemploPage/>}/>
-      </Routes>
-    </BrowserRouter>
-  );
-}
+const App = () => (
+  <AuthProvider>
+    <RoutesApp />
+  </AuthProvider>
+);
 
 export default App;
