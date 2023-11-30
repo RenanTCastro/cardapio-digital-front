@@ -14,11 +14,11 @@ return(
       <S.HomeButtonCM>
         <S.IconContainer>
           <S.RequestIconCM/>
-          <S.Label>Pedidos</S.Label>
+          <S.Label>Pedidos</S.Label> 
         </S.IconContainer>
       </S.HomeButtonCM>
     </S.MenuContainer>
-    <h1>teste</h1>
+
   </>
 )
 }
