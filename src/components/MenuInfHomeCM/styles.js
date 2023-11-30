@@ -8,11 +8,12 @@ export const MenuContainer = styled.div`
 display: flex;
 align-items: center;
 justify-content: space-between;
-width: 409px;
+width: 390px;
 height: auto;
 flex-shrink: 0;
 border: 1px solid #FF6100;
 background:#F7F7F7;
+gap:104px;
 `
 export const IconContainer=styled.div`
 display: flex;
