@@ -22,11 +22,11 @@ function EditEstab(){
             <Inputs>
                 <div className="NomeEstabContainer">
                     <InputNameEstab onChange={(e)=> setNameEstab(e.target.value)} value={nameEstab} type="text" placeholder="Nome do estabelecimento" />
-                    <img onClick={()=>setNameEstab('')} src={CancelIcon} alt="" />
+                    {nameEstab.length >= 1 && (<img onClick={()=>setNameEstab('')} src={CancelIcon} alt="" />)}
                 </div>
                 <div className="DescEstabContainer">
                     <InputDescEstab onChange={(e)=> setDescEstab(e.target.value)} value={descEstab} type='text' placeholder='Descrição'></InputDescEstab>
-                    <img onClick={()=>setDescEstab('')} src={CancelIcon} alt="" />
+                    {descEstab.length >= 1 && (<img onClick={()=>setDescEstab('')} src={CancelIcon} alt="" />)}
                 </div>
             </Inputs>
             <ButtonsContainer>
